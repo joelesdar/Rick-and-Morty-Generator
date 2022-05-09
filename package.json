@@ -1,0 +1,35 @@
+{
+  "name": "rick-and-morty-generator",
+  "version": "1.0.0",
+  "description": "Rick and Morty character generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelesdar/Rick-and-Morty-Generator.git"
+  },
+  "keywords": [
+    "Rick",
+    "and",
+    "Morty",
+    "react.js",
+    "next.js",
+    "graphql"
+  ],
+  "author": "Joel Esteban Diaz Arévalo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joelesdar/Rick-and-Morty-Generator/issues"
+  },
+  "homepage": "https://github.com/joelesdar/Rick-and-Morty-Generator#readme",
+  "dependencies": {
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
