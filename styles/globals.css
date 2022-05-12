@@ -14,3 +14,23 @@ a {
 * {
   box-sizing: border-box;
 }
+* {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* body {
+  background-image: url("http://images8.alphacoders.com/397/397989.jpg");
+  background-size: 1920px;
+  background-position: 20% 20%;
+  background-repeat: no-repeat;
+  animation: background 30s infinite alternate;
+}
+
+@keyframes background {
+  0%     {background-position: center top}
+  25%    {background-position: 18% 25%}
+  50%    {background-position: 14% 23%}
+  75%    {background-position: 20% 30%}
+  100%   {background-position: 27% 22%}
+} */
