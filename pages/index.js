@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 const Index = () => {
 
@@ -9,6 +10,7 @@ const Index = () => {
         <title>Rick and Morty Generator App</title>
       </Head>
       <Main />
+      <Footer />
     </div>
   );
 }

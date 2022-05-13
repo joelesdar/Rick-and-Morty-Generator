@@ -1,19 +1,22 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql, Mutation } from "@apollo/client";
 import styled from "styled-components";
-import 'bootstrap/dist/css/bootstrap.css';
 
 const StyledCharacter = styled.div`
-`;
+  .character-image {
+    border-radius: 100%;
+    border: #318bbe 5px solid;
+  }
+  `;
 
-const StyledButton = styled.button`
-  background-color: black;
-  font-size: 32px;
-  color: white;
-`;
+let getRandomInt = (min, max) => {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+let generateId = getRandomInt(1, 827).toString();
 
 const QUERY = gql`
-  query getCharacter {
-    character(id: "2") {
+  query getCharacter($idCharacter: ID!) {
+    character(id: $idCharacter) {
       id
       name
       status
@@ -32,8 +35,9 @@ const QUERY = gql`
   }
 `;
 
-const Character = () => {
-  const { data, loading, error } = useQuery(QUERY);
+const Character = (idCharacter) => {
+  const { data, loading, error } = useQuery(QUERY,
+    {variables : {idCharacter : generateId}});
 
   if (loading) {
     return <h2>Loading...</h2>;
@@ -45,17 +49,22 @@ const Character = () => {
   }
 
   const character = data.character;
+  let date = new Date(character.created);
 
   return (
     <StyledCharacter className="">
-        <div key={character.id} className="">
-          <img src={character.image}></img>
-          <h3>{character.name}</h3>
-          <p>Status: {character.status}</p>
-          <p>Species: {character.species}</p>
-          <p>Type: {character.type}</p>
-          <p>Origin: {character.origin.name}</p>
-          <p>Created At: {character.created}</p>
+        <div key={character.id} className="row align-items-center justify-content-evenly">
+          <div className="col-8 col-md-6 col-xl-5">
+            <img className="character-image" src={character.image}></img>
+          </div>
+          <div className="col-8 col-md-6 col-xl-5">
+            <h3>{character.name}</h3>
+            <p>Status: {character.status}</p>
+            <p>Species: {character.species}</p>
+            <p>Type: {character.type == "" ? "Unknown" : character.type}</p>
+            <p>Origin: {character.origin.name}</p>
+            <p>Created At: {date.toLocaleString('en-US', {weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'})}</p>
+          </div>
         </div>
     </StyledCharacter>
   );
