@@ -1,6 +1,9 @@
 {
   "name": "rick-and-morty-generator",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.0"
+  },
   "description": "Rick and Morty character generator",
   "main": "index.js",
   "scripts": {
