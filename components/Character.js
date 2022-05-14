@@ -2,16 +2,9 @@ import { gql, useQuery } from "@apollo/client";
 import QUERY from "./query";
 import styled from "styled-components";
 
-// const theme = {
-//   main: {
-//     radius: '100%',
-//   },
-//   sidebar: {
-//     radius: '60%',
-//   }
-// }
-
 const StyledCharacter = styled.div`
+
+  padding: 20px 0;
 
   .character-image {
     border-radius: 100%;
@@ -51,10 +44,9 @@ const Character = ({generatedId, main}) => {
   }
   
   return (
-    <StyledCharacter className="">
-      {/* <ThemeProvider theme={theme}> */}
+    <StyledCharacter>
         <div key={character.id} className="row align-items-center justify-content-evenly">
-          <div className="col-8 col-md-6 col-xl-5">
+          <div className="character-container col-8 col-md-6 col-xl-5">
                 <img className="character-image" src={character.image}></img>
           </div>
           <div className="col-8 col-md-6 col-xl-5">
@@ -64,7 +56,6 @@ const Character = ({generatedId, main}) => {
           </div>
           
         </div>
-        {/* </ThemeProvider> */}
     </StyledCharacter>
   );
 } 

@@ -6,7 +6,7 @@ const StyledFooter = styled.div`
     background: #000;
     padding: 16px 0;
     text-align: center;
-    margin-top: 232px;
+    z-index: 0;
     p {
         display: inline;
         margin: auto 0;

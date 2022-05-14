@@ -16,7 +16,7 @@ const Index = () => {
       </Head>
       <Modal characterList={characterList} />
       <Main characterId={characterId} characterList={characterList} setCharacter={setCharacter} setList={setList} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
