@@ -1,7 +1,7 @@
 import Image from "next/image";
-import ButtonBox from "../public/images/Button.png";
+import ButtonBox from "../../public/images/Button.png";
 
-const Button = () => {
+export const Button = () => {
 
   return (
     <div className="container">
@@ -13,5 +13,3 @@ const Button = () => {
     </div>
   );
 }
-
-export default Button;

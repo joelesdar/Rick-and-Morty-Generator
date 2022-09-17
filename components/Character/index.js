@@ -1,19 +1,10 @@
 import { gql, useQuery } from "@apollo/client";
-import QUERY from "./query";
-import styled from "styled-components";
+import QUERY from "../../utils/query";
+import { StyledCharacter } from "./styles";
 
-const StyledCharacter = styled.div`
 
-  padding: 20px 0;
 
-  .character-image {
-    border-radius: 100%;
-    border: #318bbe 5px solid;
-  }
-
-  `;
-
-const Character = ({generatedId, main}) => {
+export const Character = ({generatedId, main}) => {
   const { data, loading, error } = useQuery(QUERY,
     {variables : {idCharacter : generatedId}});
 
@@ -58,5 +49,3 @@ const Character = ({generatedId, main}) => {
     </StyledCharacter>
   );
 } 
-
-export default Character;

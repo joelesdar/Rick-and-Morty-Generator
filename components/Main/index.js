@@ -1,22 +1,12 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Character from "./Character";
-import Button from "./Button";
-import Logo from "../public/images/Logo.png";
-import styled from "styled-components";
-
-const StyledMain = styled.div`
-  .landing-character {
-    padding-bottom: 100px;
-  }
-
-  .logo {
-    padding: 32px 0;
-  }
-`;
+import { Character } from "../Character";
+import { Button } from "../Button";
+import Logo from "../../public/images/Logo.png";
+import { StyledMain } from "./styles";
 
 let generatedId = 0;
-const Main = ({characterId, characterList, setCharacter, setList}) => {
+export const Main = ({characterId, characterList, setCharacter, setList}) => {
 
   const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -61,5 +51,3 @@ const Main = ({characterId, characterList, setCharacter, setList}) => {
     </StyledMain>
   );
 }
-
-export default Main;

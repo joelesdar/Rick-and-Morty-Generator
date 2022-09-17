@@ -1,6 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 
-const QUERY = gql`
+export const QUERY = gql`
   query getCharacter($idCharacter: ID!) {
     character(id: $idCharacter) {
       id
@@ -17,5 +17,3 @@ const QUERY = gql`
     }
   }
 `;
-
-export default QUERY;
