@@ -31,7 +31,6 @@ const Character = ({generatedId, main}) => {
 
   const Body = () => {
     if(main) {
-      console.log(main);
       return (
         <div>
             <p>Status: {character.status}</p>

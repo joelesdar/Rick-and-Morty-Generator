@@ -50,7 +50,11 @@ const Main = ({characterId, characterList, setCharacter, setList}) => {
         </div>
         <div className="row justify-content-center">
           <div className="landing-character col-12 col-lg-8">
-            <Character generatedId={generatedId} main={true}/>
+            {generatedId === 0 ?
+              <></>
+             :
+              <Character generatedId={generatedId} main={true}/>
+             }
           </div>
         </div>
       </div>
