@@ -1,7 +1,7 @@
 ## Rick and Morty Character Generator👽👾
 
 With this app you can generate ramdon Rick and Morty characters, read their info, and also, see the history of queried characters.
-[App Demo here!](https://rick-and-morty-generator.herokuapp.com/)
+[App Demo here!](https://rick-and-morty-generator-9hdb.vercel.app/)
 ![App](./public/images/demo1.png)
 
 ![App](./public/images/demo2.png)
